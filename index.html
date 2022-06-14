@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Managment System</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #particles-js {
+            background-color: black;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+
+
+        }
+
+        h1 {
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px
+        }
+
+        thead {
+            font-size: 14px;
+        }
+    </style>
+
+
+
+</head>
+
+<body id="particles-js" class="">
+    <div>
+        <h3 class="py-3 fw-bolder text-center py-5 text-white"> Product Managment System</h3>
+
+
+        <div style="left: 0px; right: 0px;" class="main-container container row  position-absolute m-auto">
+
+            <div class="col-md-4 ps-3  p-3  text-white ">
+
+                <label class="py-2" for="ProductNameInput">Product Name : </label>
+                <input type="text" class="form-control mb-2 bg-transparent text-white" id="ProductNameInput"
+                    oninput="validationProductName()">
+
+                <label class="py-2" for="ProductPriceInput">Product price : </label>
+                <input type="number" class="form-control mb-2 bg-transparent text-white" id="ProductPriceInput">
+
+
+                <label class="py-2" for="ProductCategoryInput">Product Category : </label>
+                <input type="text" class="form-control mb-2 bg-transparent text-white" id="ProductCategoryInput"
+                    oninput="validationCategorytName()">
+
+                <label class="py-2" for="ProductDescriptionInput">Product Description : </label>
+                <textarea type="text" class="form-control mb-2 bg-transparent text-white"
+                    id="ProductDescriptionInput"></textarea>
+
+                <button id="addButton" onclick="addProduct()" class="btn btn-info bg-transparent  text-white ">
+                    AddProduct</button>
+                <button id="updateButton" onclick=" SubmitUpdatedItem()"
+                    class="btn btn-info bg-warning  text-black d-none">
+                    Update</button>
+
+                <button onclick="clearForm()" class="btn btn-danger bg-transparent text-white ms-2 "> Clear
+                    Form</button>
+
+            </div>
+            <div class="col-md-8  p-3 text-white">
+                <table class="table text-white ">
+                    <thead>
+                        <th>Index</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Category</th>
+                        <th>Product Description </th>
+                        <th>Update</th>
+                        <th>Delete</th>
+
+                        <input type="text" class="form-control w-75 m-auto mb-3 bg-transparent text-white"
+                            onkeyup=" search() " placeholder="Search....." id="searchInput">
+
+                    </thead>
+                    <tbody id="tableBody" class="text-white">
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/JavaScript" src="particles.js"></script>
+    <script type="text/JavaScript" src="app.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
